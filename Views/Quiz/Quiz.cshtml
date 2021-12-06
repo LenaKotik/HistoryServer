@@ -1,0 +1,61 @@
+﻿@model HistoryServer.Models.Question
+
+@{
+    ViewData["Title"] = "Quiz";
+}
+
+<div>
+<script>
+    var time = 10
+    var tmr;
+    function Tick(num) {
+        let timer = document.getElementsByClassName("timer")[0];
+        --time;
+        timer.textContent = time;
+        if (time == 0) {
+            clearTimeout(tmr);
+            if (num < 9) {
+                window.location.replace("/Quiz/" + (num + 1) + "/0");
+            }
+            else if (num == 9) {
+                window.location.replace("/Quiz/Result");
+            }
+        }
+    }
+    function Clicked(event, score, num) {
+        let t = event.target;
+        t.setAttribute("class", (score == 0) ? "anws-wrong" : "anws-correct");// alert(document.getElementsByClassName("anws-correct"))
+        if (event.target.tagName == "INPUT") {
+            for (let b of document.getElementsByTagName("INPUT")) {
+                b.removeEventListener("onclick", Clicked);
+            }
+        }
+        tmr = setTimeout(() => {
+            if (num < 9) {
+                window.location.replace("/Quiz/" + (num + 1) + "/" + score);
+            }
+            else if (num == 9) {
+                window.location.replace("/Quiz/Result");
+            }
+        }, 2000)
+    }
+    function Setfunc() {
+        Tick(@(Model.num));
+        setInterval(Tick, 1000, @(Model.num));
+    }
+    window.onload = Setfunc;
+</script>
+    <p class="timer">10</p>
+    <h4>@Model.question</h4>
+    <ul onload="Setfunc()">
+        @foreach (string ass in Model.anwsers)
+        {
+                <li>
+                    <input type="button" value="@ass" onclick="Clicked(event,@((ass == Model.correct) ? Model.value : 0),@(Model.num))"/>
+                </li>
+            }
+    </ul>
+    <p>@(Model.num+1)/10</p>
+</div>
+<div>
+</div>
