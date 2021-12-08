@@ -22,29 +22,22 @@ namespace HistoryServer.Controllers
             if (logger != null)
             _logger = logger;
         }
-        async public Task<IActionResult> Table()
+        async public Task<IActionResult> Table(int? n)
         {
-            return View("Table", await Database.RequestTable());
+            if (n == null)
+                return View("Table", await Database.RequestTable());
+            else
+                return Json(await Database.RequestTable());
         }
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost("/send")]
-        public IActionResult Send(Student student)
+        public IActionResult Send(string name, int? result)
         {
-            Database.Send(student.Name, student.Result);
+            Database.Send(name, (result == null) ? Database.result : (int)result);
             return Redirect("/Home/Table");
-        }
-        [HttpPost("/Sendf")]
-        public IActionResult Sendf(string name)
-        {
-            return this.Send(new Student() { Name=name, Result=(int)(Database.result / 24 * 100) });
-        }
-        [HttpGet("/leaderboardsxxx")]
-        async public Task<IActionResult> LeaderBoardsx()
-        {
-            return Json(await Database.RequestTable());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -54,8 +47,7 @@ namespace HistoryServer.Controllers
         }
         public IActionResult Download()
         {
-            FileStream f = new FileStream("C:\\Users\\User\\Desktop\\Executable.zip", FileMode.Open, FileAccess.Read);
-            return File(f, "application/zip", "Application.Zip");
+            return File(new MemoryStream(Resource.Executable), "application/zip", "Application.Zip");
         }
     }
 }

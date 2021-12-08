@@ -8,7 +8,8 @@ namespace HistoryServer.Models
 {
     public static class Database
     {
-        public static readonly string connString = "Data Source=(localdb)\\MSSQLLocalDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+        // public static readonly string connString = "Data Source=(localdb)\\MSSQLLocalDB;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False";
+        public static readonly string connString = "Server=tcp:historyserver.database.windows.net,1433;Initial Catalog=mydb;Persist Security Info=False;User ID=LenaKotik;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         public static int result;
         async public static Task<List<Student>> RequestTable()
         {

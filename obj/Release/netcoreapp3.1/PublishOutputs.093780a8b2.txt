@@ -41,6 +41,8 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.deps.json
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.runtimeconfig.json
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.pdb
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\EntityFramework.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.dll
@@ -58,6 +60,7 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\NuGet.Frameworks.dll
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\System.CodeDom.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.AttributedModel.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Convention.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\System.Composition.Hosting.dll

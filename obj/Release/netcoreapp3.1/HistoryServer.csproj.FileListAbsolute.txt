@@ -8,6 +8,8 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\HistorySer
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\HistoryServer.pdb
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\HistoryServer.Views.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\HistoryServer.Views.pdb
+C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\EntityFramework.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -25,6 +27,7 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\Microsoft.
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\System.CodeDom.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\System.Composition.AttributedModel.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\System.Composition.Convention.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\System.Composition.Hosting.dll
@@ -104,6 +107,8 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\runtimes\u
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\bin\Release\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.Resource.resources
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.csproj.GenerateResource.cache
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.AssemblyInfo.cs
