@@ -7,6 +7,11 @@
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsdRNlO8JMEaJSi9G/aVUfwAAAAACAAAAAAAQZgAAAAEAACAAAACUZyrJXWRzzDqZSHapy69DynWQ0b/WfLS+L60BmWE1TAAAAAAOgAAAAAIAACAAAABIO2GvROTMgEVtcW2bX3u5fDXIy3untgyExhs7NbrfqIAAAAC4J7xPPqXYTV/g/QzbaFb9ROcwhSkoffndn0h1RBmD+Yw/YRp5+JNMFnBXjoV7VGJSKmjf5LJytKqRaGgW5lPRFg8oYSHxZ0hh2woAI93KxYZxUtv5pusNgPylT5SEbh09DXMzB8zI2tMq/UHIW09gTuH4aS/LtCVLa0Uy40feSEAAAACnoBMSaXZzriEor9KfVrR/iLURLMpI/SL4GN/u7wQrBkQ2WG7y+/sGGyPxIveQGdSIQ/u8II0es9IaubrLUQrE</EncryptedPassword>
-    <History>True|2021-12-08T01:10:45.4533415Z;True|2021-12-08T03:44:41.5006120+03:00;True|2021-12-08T03:43:02.2907536+03:00;True|2021-12-08T03:34:51.2218691+03:00;True|2021-12-08T03:32:01.4281726+03:00;False|2021-12-08T03:29:43.0602091+03:00;</History>
+    <History>True|2021-12-08T01:25:10.8121080Z;True|2021-12-08T04:10:45.4533415+03:00;True|2021-12-08T03:44:41.5006120+03:00;True|2021-12-08T03:43:02.2907536+03:00;True|2021-12-08T03:34:51.2218691+03:00;True|2021-12-08T03:32:01.4281726+03:00;False|2021-12-08T03:29:43.0602091+03:00;</History>
   </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MyDb">
+      <Value>Data Source=tcp:historyserver.database.windows.net,1433%3bInitial Catalog=mydb%3bUser Id=LenaKotik%40historyserver%3bPassword=Poland2104</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
 </Project>

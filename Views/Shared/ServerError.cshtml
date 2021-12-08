@@ -1,0 +1,16 @@
+﻿@using System.Data.SqlClient
+@model SqlException
+@{ 
+    ViewData["Title"] = Model.ErrorCode;
+}
+<body>
+    <h1>@Model.Class class error ocured!</h1>
+    <h2>@Model.Number :</h2>
+    <p>@Model.Message</p>
+    <ul>
+        @foreach (SqlError err in Model.Errors)
+            {
+                <li>@(err.Number):@(err.Message)</li>
+            }
+    </ul>
+</body>

@@ -25,7 +25,14 @@ namespace HistoryServer.Controllers
         async public Task<IActionResult> Table(int? n)
         {
             if (n == null)
-                return View("Table", await Database.RequestTable());
+                try
+                {
+                    return View("Table", await Database.RequestTable());
+                }
+                catch (SqlException e)
+                {
+                    return View("ServerError", e);
+                }
             else
                 return Json(await Database.RequestTable());
         }
@@ -36,10 +43,16 @@ namespace HistoryServer.Controllers
         [HttpPost("/send")]
         public IActionResult Send(string name, int? result)
         {
+            try
+            {
             Database.Send(name, (result == null) ? Database.result : (int)result);
             return Redirect("/Home/Table");
+            }
+            catch (SqlException e)
+            {
+                return View("ServerError", e);
+            }
         }
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
