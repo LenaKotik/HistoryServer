@@ -10,15 +10,14 @@ namespace HistoryServer.Controllers
 {
     public class QuizController : Controller
     {
-        static int result { set { Database.result = value; } get { return Database.result; } }
         public IActionResult Result()
         {
-            return View(result);
+            return View(Database.result);
         }
         [Route("/Quiz/{num}/{pscore}")]
         public IActionResult Index(int num = 0, int pscore = 0)
         {
-            result += pscore;
+            Database.result += pscore;
             try
             {
                 Question q = Questions.At(num);
