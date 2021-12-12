@@ -1,6 +1,6 @@
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.exe
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\site.css
-C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\favicon.ico
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\icon.ico
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\js\site.js
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map

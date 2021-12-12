@@ -5,7 +5,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Добро пожаловать</h1>
+    <p>
+        <strong>
+            Этот вэб-сайт разработан Примак Олегом и Марсаковой Полиной,<br />
+            учениками 9В класса 5 гимназии имени Туренко г.Сочи.<br />
+        </strong>
+        Zip архив с разработанным нами приложением и презентацией можно скачать <a href="@(Url.Action("Download", "Home"))">тут</a><br />
+        или по ссылке в навигации<br /><br />
+
+        ход работы находится <a href="@Url.Action("Log", "Home")">тут</a>
+    </p>
     <form asp-controller="Home" asp-action="Index" method="post"\>
         <input type="text" name="Name" placeholder="Введите имя"/>
         <input type="submit"/>

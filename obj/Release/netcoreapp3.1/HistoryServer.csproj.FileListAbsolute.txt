@@ -167,3 +167,4 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistorySer
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.pdb
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\HistoryServer.genruntimeconfig.cache
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\Razor\Views\Home\Log.cshtml.g.cs

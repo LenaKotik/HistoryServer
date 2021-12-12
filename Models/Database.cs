@@ -55,7 +55,7 @@ namespace HistoryServer.Models
         {
             using (SqlConnection connection = new SqlConnection(connString))
             {
-                string query = $"INSERT INTO Students VALUES ('{name}', SYSDATETIME(), {result});";
+                string query = $"INSERT INTO Students VALUES ('{name}', SYSDATETIME(), {Math.Round(result/24.0f*100, MidpointRounding.ToPositiveInfinity)});";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     connection.Open();
