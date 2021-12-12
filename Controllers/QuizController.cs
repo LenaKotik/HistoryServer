@@ -10,19 +10,22 @@ namespace HistoryServer.Controllers
 {
     public class QuizController : Controller
     {
-        public IActionResult Result()
+        public IActionResult Result(int id, int? pscore)
         {
-            return View(Database.result);
+            Student s = Database.GetById(id);
+            if (pscore != null) s.Result += (int)pscore;
+            return View(s);
         }
-        [Route("/Quiz/{num}/{pscore}")]
-        public IActionResult Index(int num = 0, int pscore = 0)
+        [Route("/Quiz/{id}/{num}/{pscore}")]
+        public IActionResult Index(int id, int num = 0, int pscore = 0)
         {
-            Database.result += pscore;
+            Student s = Database.GetById(id);
+            s.Result += pscore;
             try
             {
                 Question q = Questions.At(num);
                 q.num = num;
-                return View("Quiz",q);
+                return View("Quiz",new KeyValuePair<Question, Student>(q, s));
             }
             catch
             {

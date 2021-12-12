@@ -10,21 +10,18 @@ namespace HistoryServer.Models
 {
     public static class Database
     {
-        public static int result;
-        private static readonly string connString = "Data Source=historyserver.database.windows.net;Initial Catalog=mydb;User ID=LenaKotik;Password=Poland2104";
-        private static SecureString Password
+        public static List<Student> online = new List<Student>();
+#nullable enable
+        public static Student? GetById(int id)
         {
-            get
+            foreach (Student s in online)
             {
-                SecureString pw = new SecureString();
-                foreach (char ch in "Poland2104")
-                {
-                    pw.AppendChar(ch);
-                }
-                pw.MakeReadOnly();
-                return pw;
+                if (s.Id == id)
+                    return s;
             }
+            return null;
         }
+        private static readonly string connString = "Data Source=historyserver.database.windows.net;Initial Catalog=mydb;User ID=LenaKotik;Password=Poland2104";
         async public static Task<List<Student>> RequestTable()
         {
             List<Student> students = new List<Student>();
@@ -48,6 +45,11 @@ namespace HistoryServer.Models
                     return students;
                 }
             }
+        }
+        public static void Send(int id)
+        {
+            Student s = GetById(id);
+            Send(s.Name, s.Result);
         }
         async public static void Send(string name, int result)
         {

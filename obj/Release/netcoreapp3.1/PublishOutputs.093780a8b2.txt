@@ -38,9 +38,10 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.dll
-C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.deps.json
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.runtimeconfig.json
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.pdb
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Azure.Core.dll
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Azure.Identity.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\EntityFramework.SqlServer.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\EntityFramework.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
@@ -54,7 +55,6 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Caching.Abstractions.dll
@@ -69,6 +69,7 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Options.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Extensions.Primitives.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Identity.Client.dll
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -166,3 +167,4 @@ C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.Views.dll
 C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.Views.pdb
+C:\Users\User\Desktop\C#stuff\HistoryServer\obj\Release\netcoreapp3.1\PubTmp\Out\HistoryServer.deps.json
