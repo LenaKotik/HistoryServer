@@ -45,6 +45,18 @@ namespace HistoryServer.Models
                 q.anwsers = q.anwsers.OrderBy(_ => r.Next()).ToArray();
             }
         }
+        public static int Score // should normaly return 24
+        {
+            get
+            {
+                int sum = 0;
+                foreach (Question q in _questions)
+                {
+                    sum += q.value;
+                }
+                return sum;
+            }
+        }
         public static int Size => _questions.Count;
         public static Question At(int i)
         {

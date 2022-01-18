@@ -1,6 +1,6 @@
 ﻿@model List<Student>
 @{
-    ViewData["Title"] = "Table";
+    ViewData["Title"] = "Таблица";
 }
 <div class="text-center">
     <h2>Таблица:</h2>
@@ -8,7 +8,7 @@
         <thead>
             <tr>
                 <td>Имя</td>
-                <td>Дата Решения</td>
+                <td>Дата Решения(МСК)</td>
                 <td>Результат</td>
             </tr>
         </thead>
@@ -17,7 +17,7 @@
             {
                 <tr>
                     <td>@s.Name</td>
-                    <td>@s.Date.ToLocalTime()</td>
+                    <td>@s.Date.AddHours(3)</td> <!--МСК это UTC+3-->
                     <td>@s.Result</td>
                 </tr>
             }

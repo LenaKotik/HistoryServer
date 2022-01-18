@@ -10,11 +10,13 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Data.SqlClient;
 using System.IO;
+using System;
 
 namespace HistoryServer.Controllers
 {
     public class HomeController : Controller
     {
+#pragma warning disable CS8618
         private readonly ILogger<HomeController> _logger;
         public HomeController(ILogger<HomeController> logger)
         {
@@ -60,9 +62,11 @@ namespace HistoryServer.Controllers
             try
             {
                 Database.Send(name, result);
+                if (!HttpContext.Request.Cookies.ContainsKey("kromer") || Convert.ToInt32(HttpContext.Request.Cookies["kromer"])<result)
+                    HttpContext.Response.Cookies.Append("kromer", result.ToString());
                 return Redirect("/Home/Table");
             }
-            catch (SqlException e)
+            catch (Exception e)
             {
                 return View("ServerError", e);
             }
@@ -71,7 +75,19 @@ namespace HistoryServer.Controllers
         [HttpPost]
         public IActionResult SendById(int id)
         {
+            if (Database.online[id].IsSent) return Redirect("/Home/Table");
             Database.Send(id: id);
+            int result = ((int)(Database.online[id].Result / (float)Questions.Score * 100));
+            try
+            {
+                if (!HttpContext.Request.Cookies.ContainsKey("kromer") || Convert.ToInt32(HttpContext.Request.Cookies["kromer"]) < result)
+                    HttpContext.Response.Cookies.Append("kromer", result.ToString());
+            }
+            catch (Exception)
+            {
+
+            }
+            HttpContext.Response.Cookies.Append("kromer", result.ToString()); // this looks awfull
             return Redirect("/Home/Table");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -85,6 +101,7 @@ namespace HistoryServer.Controllers
         }
         public IActionResult Log()
         {
+            Database.Clean(); //этот запрос самый не затратный по ресурсам, поэтому используется для очистки списка пользователей
             return View();
         }
     }

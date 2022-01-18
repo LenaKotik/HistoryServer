@@ -3,9 +3,13 @@
     ViewData["Title"] = "Результат";
 }
 <h1>@ViewData["Title"]</h1>
-<h2>Твоя оценка: @(Math.Round(Model.Result/24.0f*10.0f/2.0f, MidpointRounding.ToPositiveInfinity))</h2>
-<h3>Твой результат: @(Model.Result)/24</h3>
-<p>@((int)((float)Model.Result/24.0f*100))%</p>
+<h2>Твоя оценка: @(Math.Round(Model.Result/(float)Questions.Score*10.0f/2.0f, MidpointRounding.ToPositiveInfinity))</h2>
+<h3>Твой кромер: @(Model.Result)/@(Questions.Score)<img src="~/kromer.svg" alt="картинка кромера" height="70" width="70"/></h3>
+<p>@((int)((float)Model.Result/(float)Questions.Score*100))%</p>
+@if (Context.Request.Cookies.ContainsKey("kromer"))
+            {
+    <p>Ваш максимальный процент кромер:@Context.Request.Cookies["kromer"]</p>
+            }
 <div class="container">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 " />

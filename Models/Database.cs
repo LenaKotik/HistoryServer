@@ -34,9 +34,10 @@ namespace HistoryServer.Models
                     SqlDataReader reader = await cmd.ExecuteReaderAsync();
                     while (reader.Read())
                     {
+                        DoubleEncoding decoder = new DoubleEncoding(); 
                         Student s = new Student();
                         s.Id = (int)reader["id"];
-                        s.Name = (string)reader["name"];
+                        s.Name = decoder.Decode((string)reader["name"]);
                         s.Date = (DateTime)reader["date"];
                         s.Result = (int)reader["result"];
                         students.Add(s);
@@ -48,14 +49,34 @@ namespace HistoryServer.Models
         }
         public static void Send(int id)
         {
-            Student s = GetById(id);
-            Send(s.Name, s.Result);
+#pragma warning disable
+            try
+            {
+                Student s = GetById(id);
+                Send(s.Name, s.Result);
+                s.IsSent = true;
+            }
+            finally
+            {}
+#pragma warning restore
+        }
+        public static void Clean()
+        {
+            foreach (Student s in online)
+            {
+                if ((s.Date.Date != DateTime.Today || s.IsSent) && online.Contains(s))
+                {
+                    online.Remove(s);
+                }
+            }
         }
         async public static void Send(string name, int result)
         {
+            DoubleEncoding encoder = new DoubleEncoding();
+            string encname = encoder.Encode(name);
             using (SqlConnection connection = new SqlConnection(connString))
             {
-                string query = $"INSERT INTO Students VALUES ('{name}', SYSDATETIME(), {Math.Round(result/24.0f*100, MidpointRounding.ToPositiveInfinity)});";
+                string query = $"INSERT INTO Students VALUES ('{encname}', SYSDATETIME(), {Math.Round(result/(float)Questions.Score*100, MidpointRounding.ToPositiveInfinity)});";
                 using (SqlCommand cmd = new SqlCommand(query, connection))
                 {
                     connection.Open();

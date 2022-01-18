@@ -2,12 +2,13 @@
 @model KeyValuePair<Question,Student>
 
 @{
-    ViewData["Title"] = "Quiz";
+    ViewData["Title"] =  $"Вопрос№{Model.Key.num+1}";
 }
 
 <div>
 <script>
-    var time = 10
+    var time = 15;
+    var stoped = false;
     var tmr;
     function Tick(num) {
         let timer = document.getElementsByClassName("timer")[0];
@@ -15,27 +16,24 @@
         timer.textContent = time;
         if (time == 0) {
             clearTimeout(tmr);
-            if (num < 9) {
+            if (num < @(Questions.Size-1)) {
                 window.location.replace("/Quiz/@(Model.Value.Id)/" + (num + 1) + "/0");
             }
-            else if (num == 9) {
+            else if (num == @(Questions.Size-1)) {
                 window.location.replace("/Quiz/Result?id=@(Model.Value.Id)");
             }
         }
     }
     function Clicked(event, score, num) {
+        if (stoped) return;
+        stoped = true;
         let t = event.target;
-        t.setAttribute("class", (score == 0) ? "anws-wrong" : "anws-correct");// alert(document.getElementsByClassName("anws-correct"))
-        if (event.target.tagName == "INPUT") {
-            for (let b of document.getElementsByTagName("INPUT")) {
-                b.removeEventListener("onclick", Clicked);
-            }
-        }
+        t.setAttribute("class", (score == 0) ? "anws-wrong" : "anws-correct");
         tmr = setTimeout(() => {
-            if (num < 9) {
+            if (num < @(Questions.Size-1)) {
                 window.location.replace("/Quiz/@(Model.Value.Id)/" + (num + 1) + "/" + score);
             }
-            else if (num == 9) {
+            else if (num == @(Questions.Size-1)) {
                 window.location.replace("/Quiz/Result?id=@(Model.Value.Id)&pscore=" + score);
             }
         }, 2000)
@@ -47,7 +45,7 @@
     window.onload = Setfunc;
 </script>
     <div>
-        <p class="timer">10</p>
+        <p class="timer">15</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
         </svg>
@@ -61,8 +59,6 @@
                 </li>
             }
     </ul>
-    <strong>цена вопроса:@(Model.Key.value)</strong>
+    <strong>Кромер:@(Model.Key.value)<img src="~/kromer.svg" alt="картинка кромера" height="50" width="50"/></strong>
     <p>@(Model.Key.num+1)/10</p>
-</div>
-<div>
 </div>
